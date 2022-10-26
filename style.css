@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+main{
+    width: 100vh;
+    margin: 20px auto;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     justify-content: center;
@@ -16,23 +21,38 @@ body{
     display: flex;
 }
 
-.container{
+/* Tạo grid column vs row */
+.grid-container{
     height: auto;
-    background: gray;
+    max-width: 1066px;
+    background: #B0E0E6;
+    display: grid;
+    padding: 30px;
+    gap: 10px;
+    grid-template-columns: 4fr;
+    
 }
 
+.grid-2{
+	display: grid;
+  	grid-template-columns: 2fr 1.6fr;
+    gap: 10px;
+}
+
+.grid-container > div{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+/* Header */
 #header{
-    max-width: 900px;
-    height: 360px;
     background: white;
-    padding: 15px 0;
+    padding: 15px;
     border-radius: 15px;
-    margin: 32px;
 }
 
 img{
     padding: 15px;
-    margin-left: 40px;
     margin-top: 0;
     width: 150px;
     height: 150px;
@@ -40,17 +60,23 @@ img{
     border-radius: 50%;
 }
 
-.profile .information{
-    display: inline-block;
+.grid-1 .information{
+    display: flex;
 }
 
 .name{
     color: var(--main-color);
+    margin-left: 50px;
 }
 
 .module{
-    display: inline-flex;
+    margin-left: 180px;
     margin-bottom: 10px;
+}
+
+.module-title{
+    display: flex;
+    color: #999;
 }
 
 .module-title p{
@@ -58,35 +84,83 @@ img{
     margin-left: 10px;
 }
 
+.module-title-left{
+    padding-left: 20px;
+}
+
+.module-title-right{
+    padding-left: 20px;
+}
 .module-content{
-    padding: 10px;
-    flex-wrap: wrap;
+    padding: 15px;
+    color: #999;
 }
 
 /* layout */
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 15px 0;
-    height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
-.education-layout{
-    width: 300px;
-    height: 400px;
-    border-radius: 10px;
+.des{
     background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 0 rgb(97 97 97 / 15%);
 }
 
-.edu-above{
-    display: inline;
+.education-layout{
+    height: 240px;
+}
+
+.work-layout{
+    height: 380px;
+}
+
+.part-above{
+    display: inline block;
+    padding: 16px;
     color: var(--main-color);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #eaeaea;
+    font-size: 18px;
+    position: relative;
+}
+
+.part-above .above-right{
+    float: right;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 23px;
+}
+
+.part-above h4{
+    display: inline;
+    padding: 10px;
+}
+
+.edu-below{
+    padding: 16px;
+}
+
+.section-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.edu-school{
+    color: var(--main-color);
+    font-size: 22px;
+}
+
+.section-info .edu-date{
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    float: right;
+    background-color: #e5f7ed;
+    color: var(--main-color);
+}
+
+.content-des {
+    font-size: 18px;
 }
