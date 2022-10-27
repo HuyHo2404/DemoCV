@@ -23,14 +23,13 @@ body{
 
 /* Tạo grid column vs row */
 .grid-container{
-    height: auto;
     max-width: 1066px;
     background: #B0E0E6;
     display: grid;
     padding: 30px;
     gap: 10px;
     grid-template-columns: 4fr;
-    
+    margin: 20px;
 }
 
 .grid-2{
@@ -54,8 +53,8 @@ body{
 img{
     padding: 15px;
     margin-top: 0;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -64,9 +63,11 @@ img{
     display: flex;
 }
 
+
+
 .name{
     color: var(--main-color);
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 .module{
@@ -85,7 +86,7 @@ img{
 }
 
 .module-title-left{
-    padding-left: 20px;
+    padding-left: 45px;
 }
 
 .module-title-right{
@@ -112,6 +113,14 @@ img{
 
 .work-layout{
     height: 350px;
+}
+
+.act-layout, .target-layout{
+    height: 300px;
+}
+
+.skill-layout{
+    height: 610px;
 }
 
 .part-above{
@@ -164,3 +173,12 @@ img{
 .content-des {
     font-size: 18px;
 }
+
+@media screen and (max-width: 960px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .module-title{
+        flex-direction: column;
+    }
+  }
